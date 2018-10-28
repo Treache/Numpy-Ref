@@ -132,3 +132,25 @@ G.var()  # 0.9387452750726986  => Gives us the variance
 
 # A * B is the element-wise multiplication so A and B both has to be of the same size
 # A.dot(B) however, is the matrix multiplication
+
+# MORE MATRIX OPERATIONS
+A = np.array([ [1, 2], [3, 4] ]) #  [1 | 2]
+                                 #  [3 | 4]
+Ainv = np.linalg.inc(A) # => Invert of A 
+# [[-2. ,  1. ],
+#  [ 1.5, -0.5]]
+
+np.linalg.det(A) # -2.0000000000000004 => Matrix Determinant 
+
+
+##################################################################################################
+np.diag(A)       # [1, 4]              => Diagonal Elements
+
+np.diag([1, 2])  # [[1, 0],
+                 #  [0, 2]]
+ #### **** If you pass a 2D array to the diag function, it will return a 1D array of the diagonal 
+ ####      elements of that array. If you pass a vector to the diag function, it wil return
+ ####      a 2D array where all the non diagonal elements are zero
+
+##################################################################################################
+
