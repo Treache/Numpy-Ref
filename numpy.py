@@ -121,3 +121,14 @@ G = np.random.randn(10, 10) # A Gaussian distributed random numbers ( Wikth mean
 # Calculate statistics
 G.mean() # 0.04433675513444488 => Gives us the mean
 G.var()  # 0.9387452750726986  => Gives us the variance
+
+# Matrix Products
+
+# O     Matrix multiplication
+# O     Requirement: inner dimentions must match
+# O     If we have A of size (2,3) and B of size (3,3)
+# O     We can multiply AB (Inner dimention is 3)
+# O     We cannot multiply BA (Inner dimenstion is 3 / 2)
+
+# A * B is the element-wise multiplication so A and B both has to be of the same size
+# A.dot(B) however, is the matrix multiplication
