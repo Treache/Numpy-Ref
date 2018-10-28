@@ -30,10 +30,10 @@ np.dot(A, B)  # => 4
 A.dot(B)      # => 4
 
 #   |
-#   |a[1] O A => [1, 2]   
-#   |
-#   |                               
-#   |                                       
+#   |a[1]    
+#   |......O A => [1, 2]
+#   |     .                         
+#   |     .                                 
 #   |_____._______________      
 #   T    a[0]
 
@@ -43,3 +43,25 @@ b_magnitude = np.linalg.norm(B)      # => 2.23606797749979
 cosangle = A.dot(B) / (a_magnitude * b_magnitude) # => 0.7999999999999998
 angle = np.arccos(cosangle) # => 0.6435011087932847
 
+# A Matrix
+L = [ [1, 2], [3, 4] ]
+
+M = np.array([ [1, 2], [3, 4] ]) #  [1 | 2] 
+                                 #  [3 | 4]
+                                 
+M.T                              #  [1 | 3]  => The transpose of the matrix (Array)
+                                 #  [2 | 4]
+                                 
+# Accessing elements
+    # List => 
+L[0]    # => [1, 2]
+L[0][0] # => 1
+    # Matrix (Numpy 2D Array)
+M[0,]   # => [1, 2]
+M[0, 0] # => 1
+
+M2 = np.matrix(L) # Numpy Matrix (depricated) => We use the numpy array instead. Even 
+                  # if you see a Matrix somewhere just convert it to an array => np.array(M2)
+
+## A Vector is just a one dimentional numpy array and
+## a Matrix is really just a 2D numpy array
